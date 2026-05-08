@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Saved Replies Rescue",
+  "version": "0.1.0",
+  "description": "Local saved replies manager for support agents.",
+  "permissions": ["sidePanel", "clipboardWrite", "tabs"],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Saved Replies Rescue",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 14px;
+  background: #f6f6f6;
+  color: #1f1f1f;
+}
+
+.app {
+  width: min(380px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+/* Main blocks */
+
+.sidebar,
+.editor {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* height: 560px; */
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Inputs */
+
+.search-input,
+.field-input,
+.body-textarea {
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 9px 10px;
+  font: inherit;
+  background: #ffffff;
+  color: #1f1f1f;
+}
+
+.search-input:focus,
+.field-input:focus,
+.body-textarea:focus {
+  outline: none;
+  border-color: #777777;
+}
+
+.body-textarea {
+  min-height: 220px;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+/* Reply list */
+
+.reply-list {
+  height: 420px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 8px;
+}
+
+.reply-item {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  background: #fafafa;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+.edit-button {
+  position: absolute;
+  top: 6px;
+  right: 28px;
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: transparent;
+  color: #1565c0;
+
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.edit-button:hover {
+  background: #abc5e7;
+  color: #0d47a1;
+}
+
+.delete-button {
+  position: absolute;
+  top: 6px;
+
+  right: 6px;
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: transparent;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 0;
+  padding: 0;
+}
+
+.delete-button::before {
+  content: "×";
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.delete-button:hover {
+  background: #fdecec;
+  color: #a61b1b;
+}
+
+.reply-item:not(.inactive) .delete-button {
+  display: none;
+}
+
+.reply-item:hover {
+  background: #f0f0f0;
+}
+
+.reply-item:focus {
+  outline: none;
+  border-color: #777777;
+}
+
+.reply-item.inactive {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: #eeeeee;
+}
+
+.reply-item.inactive:hover {
+  background: #eeeeee;
+}
+
+.reply-item.inactive .reply-title,
+.reply-item.inactive .reply-preview {
+  color: #888888;
+}
+
+.reply-title {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #1f1f1f;
+}
+
+.reply-title.copied {
+  color: #2e7d32;
+}
+
+.reply-item.copied {
+  background: #edf8ef;
+  border-color: #b9e3c0;
+}
+
+.reply-item.copied:hover {
+  background: #edf8ef;
+}
+
+.reply-preview {
+  display: block;
+  font-size: 13px;
+  color: #666666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Buttons */
+
+.sidebar-actions,
+.editor-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.action-button,
+.primary-button {
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 9px 10px;
+  font: inherit;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1f1f1f;
+}
+
+.action-button:hover {
+  background: #f2f2f2;
+}
+
+.primary-button {
+  width: 100%;
+  background: #1f1f1f;
+  color: #ffffff;
+  border-color: #1f1f1f;
+}
+
+.primary-button:hover {
+  background: #333333;
+  border-color: #333333;
+}
+
+/* Checkbox */
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.form-mode {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666666;
+  margin-bottom: 2px;
+}
+
+.formatting-toolbar {
+  display: flex;
+  gap: 8px;
+}
+
+.format-button {
+  width: 32px;
+  height: 28px;
+
+  border: 1px solid #cccccc;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #1f1f1f;
+
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.format-button:hover {
+  background: #f2f2f2;
+}

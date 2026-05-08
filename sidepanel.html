@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <input
+          class="search-input"
+          type="search"
+          placeholder="Search saved replies..."
+        />
+
+        <div class="reply-list"></div>
+
+        <div class="sidebar-actions">
+          <button class="action-button new-button">New</button>
+          <button class="action-button import-button">Import</button>
+          <button class="action-button export-button">Export</button>
+        </div>
+
+        <input
+          class="import-file-input"
+          type="file"
+          accept="application/json,.json"
+          hidden
+        />
+      </aside>
+
+      <main class="editor">
+        <div class="form-mode">New saved reply</div>
+
+        <input class="field-input" type="text" placeholder="Title" />
+        <input class="field-input" type="text" placeholder="Opening" />
+        <input class="field-input" type="text" placeholder="Empathy" />
+
+        <div class="formatting-toolbar">
+          <button class="format-button bold-button" type="button">B</button>
+        </div>
+
+        <textarea class="body-textarea" placeholder="Body"></textarea>
+        <input class="field-input" type="text" placeholder="Ending" />
+
+        <label class="checkbox-row">
+          <input type="checkbox" checked />
+          Active
+        </label>
+
+        <div class="editor-actions">
+          <button class="primary-button">Save</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="defaultReplies.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
