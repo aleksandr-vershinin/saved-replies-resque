@@ -3,7 +3,7 @@
   "name": "Saved Replies Rescue",
   "version": "0.1.0",
   "description": "Local saved replies manager for support agents.",
-  "permissions": ["sidePanel", "clipboardWrite", "tabs"],
+  "permissions": ["sidePanel", "clipboardWrite"],
   "side_panel": {
     "default_path": "sidepanel.html"
   },
