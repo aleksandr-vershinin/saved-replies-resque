@@ -37,18 +37,7 @@ If the extension does not open, make sure you are on a HelpScout page or update 
 
 ## Reset to default replies
 
-If you accidentally delete or break saved replies and do not have a JSON backup, you can reset the extension to the default saved replies.
-
-1. Open the Side Panel.
-2. Right-click inside the Side Panel.
-3. Click **Inspect**.
-4. Open the **Console** tab.
-5. Run:
-
-   ```js
-   localStorage.removeItem("savedReplies");
-   location.reload();
-   ```
+No Longer works. Don't delete your saved replies, download your saved replies .json file and don't lose it OR you will have to create new by yourself! :D
 
 This will remove your locally saved replies and reload the default replies from `defaultReplies.js`.
 
