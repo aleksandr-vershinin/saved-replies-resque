@@ -57,10 +57,15 @@ Important: this resets all local changes. If you made custom edits, export a JSO
 ## Usage
 
 Cread – click on New button –> feel necessary fields -> click Save to save changes.
+
 Copy – click on a card of required SR and it is saved to buffer -> just cmd/ctrl–v anywhere :)
+
 Edit -> click on edit (pencil) button -> click Save to save changes.
+
 Deactivate (temporary) – edit your SR -> uncheck the box.
+
 Delete (permannt) – edit your SR -> uncheck the box -> click on delete (x) button on top right corner of SR card.
+
 TODO: Import, Export, 
 
 ## Updating
